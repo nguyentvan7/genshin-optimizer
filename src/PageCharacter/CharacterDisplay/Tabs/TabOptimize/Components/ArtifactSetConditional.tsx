@@ -15,6 +15,8 @@ import { DataContext, dataContextObj } from '../../../../../DataContext';
 import usePromise from '../../../../../ReactHooks/usePromise';
 import { allArtifactSets, SetNum } from '../../../../../Types/consts';
 import { constant } from '../../../../../Formula/utils';
+import { UIData } from '../../../../../Formula/uiData';
+import { objectKeyMap } from '../../../../../Util/Util';
 
 export default function ArtifactSetConditional({ disabled }: { disabled?: boolean }) {
   const { character } = useContext(DataContext)
@@ -85,7 +87,7 @@ function ArtConditionalModal({ open, onClose, artifactCondCount }: {
                   </Box>
                 </Box>
               </Box>
-              <DataContext.Provider value={fakeData(dataContext)}>
+              <DataContext.Provider value={fakeData(dataContext) /* TODO: Do we need to Memo this? */}>
                 <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {Object.keys(sheet.setEffects)
                     .filter(setNumKey => sheet.setEffects[setNumKey]?.document
@@ -110,7 +112,8 @@ function ArtConditionalModal({ open, onClose, artifactCondCount }: {
 }
 
 function fakeData(currentContext: dataContextObj): dataContextObj {
-  const fakeContext = { ...currentContext }
-  fakeContext.data.data[0].artSet = Object.fromEntries(allArtifactSets.map(setKey => [setKey, constant(4)]))
-  return fakeContext
+  return {
+    ...currentContext,
+    data: new UIData({ ...currentContext.data.data[0], artSet: objectKeyMap(allArtifactSets, _ => constant(4)) }, undefined)
+  }
 }
