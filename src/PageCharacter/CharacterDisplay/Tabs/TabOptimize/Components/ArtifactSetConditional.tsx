@@ -11,9 +11,10 @@ import SqBadge from '../../../../../Components/SqBadge';
 import { Stars } from '../../../../../Components/StarDisplay';
 import { Translate } from '../../../../../Components/Translate';
 import { ArtifactSheet } from '../../../../../Data/Artifacts/ArtifactSheet';
-import { DataContext } from '../../../../../DataContext';
+import { DataContext, dataContextObj } from '../../../../../DataContext';
 import usePromise from '../../../../../ReactHooks/usePromise';
 import { allArtifactSets, SetNum } from '../../../../../Types/consts';
+import { constant } from '../../../../../Formula/utils';
 
 export default function ArtifactSetConditional({ disabled }: { disabled?: boolean }) {
   const { character } = useContext(DataContext)
@@ -84,6 +85,7 @@ function ArtConditionalModal({ open, onClose, artifactCondCount }: {
                   </Box>
                 </Box>
               </Box>
+              <DataContext.Provider value={fakeData(dataContext)}>
               <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
                 {Object.keys(sheet.setEffects)
                   .filter(setNumKey => sheet.setEffects[setNumKey]?.document
@@ -94,6 +96,7 @@ function ArtConditionalModal({ open, onClose, artifactCondCount }: {
                   )
                 }
               </CardContent>
+                </DataContext.Provider>
             </CardLight>
           </Grid>
         })}
@@ -105,3 +108,8 @@ function ArtConditionalModal({ open, onClose, artifactCondCount }: {
     </CardContent>
   </CardDark></ModalWrapper>
 }
+
+function fakeData(currentContext: dataContextObj): dataContextObj {
+  const fakeContext = { ...currentContext }
+  fakeContext.data.data[0].artSet = Object.fromEntries(allArtifactSets.map(setKey => [setKey, constant(4)]))
+  return fakeContext
