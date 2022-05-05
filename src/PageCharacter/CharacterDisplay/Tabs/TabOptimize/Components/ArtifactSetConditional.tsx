@@ -86,17 +86,17 @@ function ArtConditionalModal({ open, onClose, artifactCondCount }: {
                 </Box>
               </Box>
               <DataContext.Provider value={fakeData(dataContext)}>
-              <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                {Object.keys(sheet.setEffects)
-                  .filter(setNumKey => sheet.setEffects[setNumKey]?.document
-                    .some(doc => "path" in doc)
-                  )
-                  .map(setNumKey =>
-                    <SetEffectDisplay key={setNumKey} setKey={setKey} setNumKey={parseInt(setNumKey) as SetNum} hideHeader />
-                  )
-                }
-              </CardContent>
-                </DataContext.Provider>
+                <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                  {Object.keys(sheet.setEffects)
+                    .filter(setNumKey => sheet.setEffects[setNumKey]?.document
+                      .some(doc => "path" in doc)
+                    )
+                    .map(setNumKey =>
+                      <SetEffectDisplay key={setNumKey} setKey={setKey} setNumKey={parseInt(setNumKey) as SetNum} hideHeader />
+                    )
+                  }
+                </CardContent>
+              </DataContext.Provider>
             </CardLight>
           </Grid>
         })}
