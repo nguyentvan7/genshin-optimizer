@@ -113,3 +113,4 @@ function fakeData(currentContext: dataContextObj): dataContextObj {
   const fakeContext = { ...currentContext }
   fakeContext.data.data[0].artSet = Object.fromEntries(allArtifactSets.map(setKey => [setKey, constant(4)]))
   return fakeContext
+}
