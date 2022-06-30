@@ -72,6 +72,15 @@ export default function TabBuild() {
 
   const noArtifact = useMemo(() => !database._getArts().length, [database])
 
+  const [alertWhenDone, setAlertWhenDone] = useState(false)
+  const [buildDone, setBuildDone] = useState(false)
+  useEffect(() => {
+    if(buildDone && alertWhenDone) {
+      alert("Builds have finished generating")
+    }
+    setBuildDone(false)
+  }, [alertWhenDone, setBuildDone, buildDone])
+
   const { buildSetting, buildSettingDispatch } = useBuildSetting(characterKey)
   const { plotBase, optimizationTarget, mainStatAssumptionLevel, allowPartial, builds, buildDate, maxBuildsToShow, levelLow, levelHigh } = buildSetting
   const teamData = useTeamData(characterKey, mainStatAssumptionLevel)
@@ -285,9 +294,10 @@ export default function TabBuild() {
       const builds = mergeBuilds(results.map(x => x.builds), maxBuildsToShow)
       if (process.env.NODE_ENV === "development") console.log("Build Result", builds)
       buildSettingDispatch({ builds: builds.map(build => build.artifactIds), buildDate: Date.now() })
+      setBuildDone(true)
     }
     setBuildStatus({ ...status, type: "inactive", finishTime: performance.now() })
-  }, [characterKey, database, buildSettingDispatch, maxWorkers, buildSetting, equipmentPriority])
+  }, [characterKey, database, buildSettingDispatch, maxWorkers, buildSetting, equipmentPriority, setBuildDone])
 
   const characterName = characterSheet?.name ?? "Character Name"
 
@@ -389,6 +399,12 @@ export default function TabBuild() {
               {range(1, defThreads).reverse().map(v => <MenuItem key={v}
                 onClick={() => setMaxWorkers(v)}>{v} {v === 1 ? "Thread" : "Threads"}</MenuItem>)}
             </DropdownButton>
+            <Button
+              color={alertWhenDone ? "success" : "secondary"}
+              onClick={() => setAlertWhenDone(!alertWhenDone)}
+              startIcon={alertWhenDone ? <CheckBox /> : <CheckBoxOutlineBlank />}>
+              Alert when done
+            </Button>
             <Button
               disabled={!generatingBuilds}
               color="error"
