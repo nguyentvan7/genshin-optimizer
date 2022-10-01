@@ -254,6 +254,7 @@ const target = setReadNodeKeys(deepClone(input), ["target"])
 const tally = {
   ...setReadNodeKeys(objectKeyMap([...allElements, ...allRegions], _ => read("add")), ["tally"]),
   ele: todo,
+  maxEleMas: setReadNodeKeys(read("max"), ["tally", "maxEleMas"])
 }
 tally.ele = sum(...allElements.map(ele => min(tally[ele], 1)))
 /** Get a singleton `tally` node with path `["tally", ...path]` */
