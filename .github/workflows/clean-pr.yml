@@ -6,12 +6,10 @@ on:
 
 jobs:
   deploy:
-    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - name: Checkout gh-pages
-        if: ${{ steps.branch-deploy.outputs.continue == 'true' }}
         uses: actions/checkout@v3
         with:
           ref: gh-pages
