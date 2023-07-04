@@ -9,7 +9,7 @@ import App from './app/App'
 import './index.css'
 import NewTab from './app/NewTab'
 ReactGA.initialize(process.env.NX_GA_TRACKINGID as any, {
-  testMode: process.env.NODE_ENV === 'development',
+  testMode: process.env.NODE_ENV === 'development'
 })
 let mode: 'main' | 'newtab' = 'main'
 let root = createRoot(document.getElementById('root') as HTMLElement)
