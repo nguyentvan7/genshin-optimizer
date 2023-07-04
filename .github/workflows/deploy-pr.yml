@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: 18
           cache: 'yarn'
+      # Find the PR associated with this push, if there is one.
+      - uses: jwalton/gh-find-current-pr@v1
+        id: findPr
+        with:
+          state: open
       - name: Yarn install
         run: |
           yarn install --immutable --immutable-cache
@@ -37,17 +42,17 @@ jobs:
           path: gh-pages
       - name: Move to gh-pages
         run: |
-          mkdir --parents "gh-pages/pr${{ github.event.issue.number }}"
-          rm -rfv "gh-pages/pr${{ github.event.issue.number }}" || true
-          mv "dist/apps/frontend" "gh-pages/pr${{ github.event.issue.number }}"
+          mkdir --parents "gh-pages/pr${{ steps.findPr.outputs.pr }}"
+          rm -rfv "gh-pages/pr${{ steps.findPr.outputs.pr }}" || true
+          mv "dist/apps/frontend" "gh-pages/pr${{ steps.findPr.outputs.pr }}"
       - name: Make commit to deploy
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ./pr${{ github.event.issue.number }}
-          git commit -m "build pr${{ github.event.issue.number }} ${{ steps.branch-deploy.outputs.ref }}"
+          git add ./pr${{ steps.findPr.outputs.pr }}
+          git commit -m "build pr${{ steps.findPr.outputs.pr }} ${{ steps.branch-deploy.outputs.ref }}"
           git push origin gh-pages
         working-directory: gh-pages
       - name: Update deployment message
         run: |
-          echo "DEPLOY_MESSAGE=Deployed to https://${{ github.repository_owner }}.github.io/${GITHUB_REPOSITORY#*/}/pr${{ github.event.issue.number }}" >> $GITHUB_ENV
+          echo "DEPLOY_MESSAGE=Deployed to https://${{ github.repository_owner }}.github.io/${GITHUB_REPOSITORY#*/}/pr${{ steps.findPr.outputs.pr }}" >> $GITHUB_ENV
