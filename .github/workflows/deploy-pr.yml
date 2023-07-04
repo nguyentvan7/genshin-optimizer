@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  deploy:
-    if: ${{ github.event.pull_request.draft == 'false' }}
+  deploy:    
+    if: ${{ github.event.pull_request.draft != 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
