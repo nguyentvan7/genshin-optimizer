@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       repo_full_name:
-        description: 'Full repository name to build from. E.g. `frzyc/genshin-optimizer`'
+        description: 'Full repository name to build from.'
         type: string
         default: 'frzyc/genshin-optimizer'
       ref:
