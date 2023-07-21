@@ -83,7 +83,7 @@ jobs:
           body-include: '<!-- Created by actions-cool/maintain-one-comment -->'
       - name: Build genshin-optimizer
         run: |
-          NX_URL_GITHUB_GO_CURRENT_VERSION="https://github.com/${{ steps.build-info.outputs.repo_name }}/commit/${{ steps.build-info.outputs.ref }}" \
+          NX_URL_GITHUB_GO_CURRENT_VERSION="https://github.com/${{ steps.build-info.outputs.repo_name }}/commit/$(git rev-parse HEAD)" \
           NX_DAEMON="false" \
           yarn run nx run frontend:build-webpack:production --base-href=""
       - name: Checkout external gh-pages
