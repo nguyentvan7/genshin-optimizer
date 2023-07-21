@@ -35,13 +35,29 @@ jobs:
       - name: Determine build information
         id: build-info
         run: |
-          echo "repo_name=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ github.event.inputs.repo_full_name }} || ${{ github.repository }})" >> $GITHUB_OUTPUT
-          echo "ref=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ github.event.inputs.ref }} || ${{ github.head_ref }} )" >> $GITHUB_OUTPUT
-          echo "deploy_path=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ format('manual/{0}', github.event.inputs.commit_hash) }} || ${{ format('pr/{0}', github.event.number) }} )" >> $GITHUB_OUTPUT
+          if [[ "${{ github.event.name }}" == "workflow_dispatch" ]]
+          then
+            echo "repo_name=${{ github.event.inputs.repo_full_name }}" >> $GITHUB_OUTPUT
+          else
+            echo "repo_name=${{ github.repository }}" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ github.event.name }}" == "workflow_dispatch" ]]
+          then
+            echo "ref=${{ github.event.inputs.ref }}" >> $GITHUB_OUTPUT
+          else
+            echo "ref=${{ github.head_ref }}" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ github.event.name }}" == "workflow_dispatch" ]]
+          then
+            echo "deploy_path=${{ github.event.inputs.deployment_name }}" >> $GITHUB_OUTPUT
+          else
+            echo "deploy_path=${{ github.event.number }}" >> $GITHUB_OUTPUT
+          fi
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: ${{ steps.build-info.repo_name }}
+          repository: ${{ steps.build-info.outputs.repo_name }}
+          ref: ${{ steps.build-info.outputs.ref }}
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -56,6 +72,7 @@ jobs:
           ENVFILE: ${{ secrets.ENVFILE }}
       - name: Output date
         id: output-date
+        if: github.event.name != 'workflow_dispatch'
         run: echo "date=$(date -u)" >> $GITHUB_OUTPUT
       - name: Maintain comment
         uses: actions-cool/maintain-one-comment@v3
@@ -66,7 +83,7 @@ jobs:
           body-include: '<!-- Created by actions-cool/maintain-one-comment -->'
       - name: Build genshin-optimizer
         run: |
-          NX_URL_GITHUB_GO_CURRENT_VERSION="https://github.com/${{ github.repository }}/commit/$(git rev-parse HEAD)" \
+          NX_URL_GITHUB_GO_CURRENT_VERSION="https://github.com/${{ steps.build-info.outputs.repo_name }}/commit/${{ steps.build-info.outputs.ref }}" \
           NX_DAEMON="false" \
           yarn run nx run frontend:build-webpack:production --base-href=""
       - name: Checkout external gh-pages
@@ -78,24 +95,25 @@ jobs:
           path: gh-pages
       - name: Move to external gh-pages
         run: |
-          mkdir --parents "gh-pages/${{ github.event.number }}"
-          rm -rfv "gh-pages/${{ github.event.number }}" || true
-          mv "dist/apps/frontend" "gh-pages/${{ github.event.number }}"
+          mkdir --parents "gh-pages/${{ steps.build-info.outputs.deploy_path }}"
+          rm -rfv "gh-pages/${{ steps.build-info.outputs.deploy_path }}" || true
+          mv "dist/apps/frontend" "gh-pages/${{ steps.build-info.outputs.deploy_path }}"
       - name: Make commit to deploy
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ./${{ github.event.number }}
-          git commit -m "build ${{ github.event.number }} ${{ github.repository }}@$(cd .. && git rev-parse HEAD)"
+          git add ./${{ steps.build-info.outputs.deploy_path }}
+          git commit -m "build ${{ steps.build-info.outputs.deploy_path }} ${{ steps.build-info.outputs.repo_name }}@${{ steps.build-info.outputs.ref }}"
           git push origin gh-pages
         working-directory: gh-pages
       - name: Export url
         id: export-url
         run: |
           IFS=/ read -r account repo <<< ${{ vars.PR_REPO }}
-          echo "url=Deployed to https://$account.github.io/$repo/${{ github.event.number }} (Takes 3-5 minutes after this completes to be available)" >> $GITHUB_OUTPUT
+          echo "url=Deployed to https://$account.github.io/$repo/${{ steps.build-info.outputs.deploy_path }} (Takes 3-5 minutes after this completes to be available)" >> $GITHUB_OUTPUT
       - name: Output date
         id: output-date2
+        if: github.event.name != 'workflow_dispatch'
         run: echo "date=$(date -u)" >> $GITHUB_OUTPUT
       - name: Maintain comment
         uses: actions-cool/maintain-one-comment@v3
