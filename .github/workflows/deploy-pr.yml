@@ -5,16 +5,40 @@ on:
     branches:
       - master
     types: [opened, reopened, synchronize, ready_for_review]
+  workflow_dispatch:
+    inputs:
+      repo_full_name:
+        description: 'Full repository name to build from. E.g. `frzyc/genshin-optimizer`'
+        type: string
+      commit_hash:
+        description: 'Commit hash to build from.'
+        type: string
+      deployment_name:
+        description: 'Name for the deployment. This will determine the URL. If you choose a name that is already deployed, it will overwrite that deployment.'
+        type: string
 
 jobs:
   deploy:
     # Skip for drafts or for forked PRs, as they lack secret access and cannot deploy
-    if: (github.event.pull_request.draft != true) && (github.event.pull_request.head.repo.full_name == github.repository)
+    if: |
+      (github.event.name == 'workflow_dispatch') 
+      || (
+        (github.event.pull_request.draft != true) 
+        && (github.event.pull_request.head.repo.full_name == github.repository)
+      )
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Determine build information
+        id: build-info
+        run: |
+          echo "repo_name=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ github.event.inputs.repo_full_name }} || ${{ github.repository }})" >> $GITHUB_OUTPUT
+          echo "ref=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ github.event.inputs.commit_hash }} || ${{ github.head_ref )" >> $GITHUB_OUTPUT
+          echo "deploy_path=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ format('manual/{0}', github.event.inputs.commit_hash) }} || ${{ format('pr/{0}', github.event.number) }} )" >> $GITHUB_OUTPUT
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          repository: ${{ steps.build-info.repo_name }}
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -32,6 +56,7 @@ jobs:
         run: echo "date=$(date -u)" >> $GITHUB_OUTPUT
       - name: Maintain comment
         uses: actions-cool/maintain-one-comment@v3
+        if: github.event.name != 'workflow_dispatch'
         with:
           body: |
             [${{ steps.output-date.outputs.date }}] - Building new version
@@ -71,6 +96,7 @@ jobs:
         run: echo "date=$(date -u)" >> $GITHUB_OUTPUT
       - name: Maintain comment
         uses: actions-cool/maintain-one-comment@v3
+        if: github.event.name != 'workflow_dispatch'
         with:
           body: |
             [${{ steps.output-date2.outputs.date }}] - ${{ steps.export-url.outputs.url }}
