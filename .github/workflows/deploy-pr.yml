@@ -33,7 +33,7 @@ jobs:
         id: build-info
         run: |
           echo "repo_name=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ github.event.inputs.repo_full_name }} || ${{ github.repository }})" >> $GITHUB_OUTPUT
-          echo "ref=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ github.event.inputs.commit_hash }} || ${{ github.head_ref )" >> $GITHUB_OUTPUT
+          echo "ref=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ github.event.inputs.commit_hash }} || ${{ github.head_ref }} )" >> $GITHUB_OUTPUT
           echo "deploy_path=$(${{ github.event.name == 'workflow_dispatch' }} && ${{ format('manual/{0}', github.event.inputs.commit_hash) }} || ${{ format('pr/{0}', github.event.number) }} )" >> $GITHUB_OUTPUT
       - name: Checkout
         uses: actions/checkout@v3
