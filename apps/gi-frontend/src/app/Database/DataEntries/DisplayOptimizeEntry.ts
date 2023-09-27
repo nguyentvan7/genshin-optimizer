@@ -4,6 +4,7 @@ import { DataEntry } from '../DataEntry'
 interface IDisplayOptimizeEntry {
   threads: number
 }
+
 export const defThreads = navigator?.hardwareConcurrency || 4
 function initialTabOptimize(): IDisplayOptimizeEntry {
   return {
