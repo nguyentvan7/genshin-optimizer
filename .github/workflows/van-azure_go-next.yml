@@ -21,14 +21,17 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: npm install, build, and test
+      - name: yarn install, build, and test
         run: |
           yarn install
           yarn run nx run frontend:build:production
           yarn run nx run-many --target=test
 
+      - name: Prune dev dependencies
+        run: yarn install --production
+
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r -x .git libs/dm/Texture2D tmp
+        run: zip release.zip ./* -r -x .git libs/dm/Texture2D tmp libs/dm/GenshinData/.git libs/dm/GenshinData/Readable libs/dm/GenshinData/BinOutput libs/GenshinData/Subtitle libs/sr-dm/StarRailData/ node_modules/.cache
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
