@@ -1,0 +1,15 @@
+import { ProjectConfiguration, Tree } from '@nx/devkit';
+export interface StorybookStoriesSchema {
+    project: string;
+    generateCypressSpecs: boolean;
+    js?: boolean;
+    cypressProject?: string;
+    ignorePaths?: string[];
+    skipFormat?: boolean;
+}
+export declare function projectRootPath(tree: Tree, config: ProjectConfiguration): Promise<string>;
+export declare function containsComponentDeclaration(tree: Tree, componentPath: string): boolean;
+export declare function createAllStories(tree: Tree, projectName: string, generateCypressSpecs: boolean, js: boolean, cypressProject?: string, ignorePaths?: string[]): Promise<void>;
+export declare function storiesGenerator(host: Tree, schema: StorybookStoriesSchema): Promise<void>;
+export default storiesGenerator;
+export declare const storiesSchematic: (generatorOptions: StorybookStoriesSchema) => (tree: any, context: any) => Promise<any>;
