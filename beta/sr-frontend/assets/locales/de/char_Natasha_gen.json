@@ -4,47 +4,84 @@
     "basic": {
       "0": {
         "name": "Freundliche Fassade",
-        "fullDesc": "Fügt einem anvisierten Gegner physischen SCH in Höhe von <orangeStrong>{{1}}%</orangeStrong> von Natashas ANG zu.",
-        "shortDesc": "Fügt einem Gegner geringen physischen SCH zu."
+        "fullDesc": "Fügt einem anvisierten Gegner physischen SCH in Höhe von <orangeStrong>{{1, percent}}%</orangeStrong> von Natashas ANG zu.",
+        "shortDesc": "Fügt einem Gegner geringen physischen SCH zu.",
+        "tag": "Einzelangriff"
       }
     },
     "skill": {
       "0": {
         "name": "Lieben, heilen und wählen",
-        "fullDesc": "Stellt LP eines anvisierten Verbündeten sofort um <orangeStrong>{{1}}%</orangeStrong> von Natashas max. LP plus <orangeStrong>{{4}}</orangeStrong> wieder her. Stellt außerdem LP des Verbündeten zu Beginn jeder Runde um <orangeStrong>{{2}}%</orangeStrong> von Natashas max. LP plus <orangeStrong>{{5}}</orangeStrong> für {{3}} Rd. wieder her.",
-        "shortDesc": "Stellt LP <orangeStrong>eines einzelnen Verbündeten</orangeStrong> wieder her und <orangeStrong>heilt ihn kontinuierlich</orangeStrong>."
+        "fullDesc": "Stellt LP eines anvisierten Verbündeten sofort um <orangeStrong>{{1, percent(fixed: 1)}}%</orangeStrong> von Natashas max. LP plus <orangeStrong>{{4}}</orangeStrong> wieder her. Stellt außerdem LP des Verbündeten zu Beginn jeder Runde um <orangeStrong>{{2, percent(fixed: 1)}}%</orangeStrong> von Natashas max. LP plus <orangeStrong>{{5}}</orangeStrong> für {{3}} Rd. wieder her.",
+        "shortDesc": "Stellt LP <orangeStrong>eines einzelnen Verbündeten</orangeStrong> wieder her und <orangeStrong>heilt ihn kontinuierlich</orangeStrong>.",
+        "tag": "Wiederherstellung"
       }
     },
     "ult": {
       "0": {
         "name": "Geschenk der Wiedergeburt",
-        "fullDesc": "Stellt LP aller Verbündeten sofort um <orangeStrong>{{1}}%</orangeStrong> von Natashas max. LP plus <orangeStrong>{{2}}</orangeStrong> wieder her.",
-        "shortDesc": "<orangeStrong>Stellt die LP aller Verbündeten wieder her</orangeStrong>."
+        "fullDesc": "Stellt LP aller Verbündeten sofort um <orangeStrong>{{1, percent(fixed: 1)}}%</orangeStrong> von Natashas max. LP plus <orangeStrong>{{2}}</orangeStrong> wieder her.",
+        "shortDesc": "<orangeStrong>Stellt die LP aller Verbündeten wieder her</orangeStrong>.",
+        "tag": "Wiederherstellung"
+      }
+    },
+    "talent": {
+      "0": {
+        "name": "Innervation",
+        "fullDesc": "Heilt Natasha Verbündete mit LP-Prozentsatz von {{1, percent}}% oder niedriger, wird die bewirkte Heilung um <orangeStrong>{{2, percent}}%</orangeStrong> erhöht. Dieser Effekt wirkt auch bei der kontinuierlichen Heilung.",
+        "shortDesc": "Wenn Verbündete mit wenig LP geheilt werden, wird die bewirkte Heilung erhöht. Dieser Effekt gilt auch für kontinuierliche Heilung.",
+        "tag": "Verstärkung"
       }
     },
     "technique": {
       "0": {
         "name": "Hypnoseforschung",
-        "fullDesc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt einem zufälligen Gegner physischen SCH in Höhe von {{4}}% von Natashas ANG zu und verursacht bei allen Gegnern mit einer <u>Grundchance</u> von {{1}}% Schwächung.\\nGeschwächte Gegner fügen Verbündeten für {{3}} Rd. {{2}}% weniger SCH zu.",
-        "shortDesc": "Greift den Gegner an. Fügt nach Kampfeintritt einem zufälligen Gegner geringen physischen SCH zu, mit einer hohen Chance, allen gegnerischen Zielen Schwächung zuzufügen."
+        "fullDesc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt einem zufälligen Gegner physischen SCH in Höhe von {{4, percent}}% von Natashas ANG zu und verursacht bei allen Gegnern mit einer Grundchance von {{1, percent}}% Schwächung.<br>Geschwächte Gegner fügen Verbündeten für {{3}} Rd. {{2, percent}}% weniger SCH zu.",
+        "shortDesc": "Greift den Gegner an. Fügt nach Kampfeintritt einem zufälligen Gegner geringen physischen SCH zu, mit einer hohen Chance, allen gegnerischen Zielen Schwächung zuzufügen.",
+        "tag": ""
       }
     },
     "overworld": {
       "0": {
         "name": "Angriff",
         "fullDesc": "Greift den Gegner an und schwächt nach Kampfeintritt den Widerstand des Ziels gegen den entsprechenden Typ.",
-        "shortDesc": ""
+        "shortDesc": "",
+        "tag": ""
+      }
+    },
+    "bonusAbility1": {
+      "0": {
+        "name": "Beruhigung",
+        "fullDesc": "Entfernt beim Einsatz der Fertigkeit {{1}} Debuff von einem anvisierten Verbündeten.",
+        "shortDesc": "",
+        "tag": ""
+      }
+    },
+    "bonusAbility2": {
+      "0": {
+        "name": "Heilerin",
+        "fullDesc": "Erhöht Natashas bewirkte Heilung um {{1, percent}}%.",
+        "shortDesc": "",
+        "tag": ""
+      }
+    },
+    "bonusAbility3": {
+      "0": {
+        "name": "Genesung",
+        "fullDesc": "Verlängert die kontinuierliche Heilung durch die Fertigkeit um {{1}} Rd.",
+        "shortDesc": "",
+        "tag": ""
       }
     }
   },
   "ranks": {
     "1": {
       "name": "Pharmakologisches Fachwissen",
-      "desc": "Wenn Natashas LP-Prozentsatz nach einem gegnerischen Angriff {{1}}% oder niedriger ist, heilt sie sich 1-mal und erhält {{2}}% ihrer max. LP plus {{3}} zurück. Dieser Effekt kann nur einmal pro Kampf ausgelöst werden."
+      "desc": "Wenn Natashas LP-Prozentsatz nach einem gegnerischen Angriff {{1, percent}}% oder niedriger ist, heilt sie sich 1-mal und erhält {{2, percent}}% ihrer max. LP plus {{3}} zurück. Dieser Effekt kann nur einmal pro Kampf ausgelöst werden."
     },
     "2": {
       "name": "Klinische Forschung",
-      "desc": "Der Ultimate gewährt Verbündeten, deren LP-Prozentsatz {{1}}% oder niedriger ist, für {{2}} Rd. kontinuierliche Heilung. Zu Beginn ihrer Runde werden ihre LP um {{3}}% von Natashas max. LP plus {{4}} wiederhergestellt."
+      "desc": "Der Ultimate gewährt Verbündeten, deren LP-Prozentsatz {{1, percent}}% oder niedriger ist, für {{2}} Rd. kontinuierliche Heilung. Zu Beginn ihrer Runde werden ihre LP um {{3, percent}}% von Natashas max. LP plus {{4}} wiederhergestellt."
     },
     "3": {
       "name": "Das richtige Heilmittel",
@@ -60,7 +97,7 @@
     },
     "6": {
       "name": "Ärztliche Gnade",
-      "desc": "Der Standardangriff verursacht zusätzlichen physischen SCH in Höhe von {{1}}% von Natashas max. LP."
+      "desc": "Der Standardangriff verursacht zusätzlichen physischen SCH in Höhe von {{1, percent}}% von Natashas max. LP."
     }
   }
 }
