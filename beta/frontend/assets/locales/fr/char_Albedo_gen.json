@@ -133,7 +133,7 @@
     "description": {
       "0": "<strong>Genèse : Aura solaire</strong> confère pendant 30 s l'effet Jugement fatal à Albedo lorsque des germes éphémères sont générés :",
       "1": [
-        " Tous les cumuls de jugement fatal sont consommés lors du lancement de <strong>Transformation : Reflux Géo</strong>, conférant aux germes fatals et aux DGT d'explosion de cette aptitude un bonus de DGT proportionnel au nombre de cumuls.",
+        " Tous les cumuls de jugement fatal sont consommés lors du lancement de <strong>Transformation : Reflux Géo</strong>, conférant aux germes fatals et aux DGT explosifs de cette aptitude un bonus de DGT proportionnel au nombre de cumuls.",
         " Chaque cumul de jugement fatal confère un bonus de DGT équivalant à 30 % de la DÉF d'Albedo.",
         " Cet effet peut être cumulé 4 fois maximum."
       ]
@@ -162,7 +162,7 @@
   "constellation6": {
     "name": "Pureté de la terre",
     "description": {
-      "0": "Les personnages déployés se trouvant dans la zone de l'aura solaire infligent 17 % de DGT supplémentaires lorsqu'ils sont sous la protection d'un bouclier généré par une Cristallisation."
+      "0": "Les personnages déployés se trouvant dans la zone de l'aura solaire infligent 17 % de DGT supplémentaires lorsqu'ils sont sous la protection d'un bouclier généré par une réaction de Cristallisation."
     }
   }
 }

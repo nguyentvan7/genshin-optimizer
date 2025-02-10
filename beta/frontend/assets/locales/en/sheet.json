@@ -25,6 +25,8 @@
   "members_other": "{{count}} Members",
   "times_one": "{{count}} Time",
   "times_other": "{{count}} Times",
+  "points_one": "{{count}} Point",
+  "points_other": "{{count}} Points",
   "level": "Level {{count}}",
   "afterDefeatEnemy": "After defeating an opponent",
   "hitOp": {
@@ -60,7 +62,11 @@
     "burst": "After using Elemental Burst",
     "skillOrBurst": "After using Ele. Skill or Ele. Burst",
     "skillPress": "After using Elemental Skill (Press)",
-    "skillHold": "After using Elemental Skill (Hold)"
+    "skillHold": "After using Elemental Skill (Hold)",
+    "sprint": "After using Sprint or Alternate Sprint"
+  },
+  "otherTeamAfterUse": {
+    "skill": "After other nearby party members use Elemental Skills"
   },
   "reactionOp": {
     "overload": "After triggering an <overloaded>Overloaded</overloaded> reaction"
@@ -86,6 +92,7 @@
   "charOffField": "Character is off-field",
   "activeCharField": "Character is inside the ability's field",
   "opponentsField": "Opponent is inside the ability's field",
+  "numOpponentsField": "Number of opponents inside the ability's field",
   "takeDmg": "After taking DMG",
   "infusion": {
     "pyro": "Pyro Infusion",
@@ -116,6 +123,7 @@
   "protectedByShield": "Protected by a shield",
   "protectedByShieldCrystal": "Protected by a shield created by Crystallize",
   "notProtectedByShield": "While not protected by a shield",
+  "creatingShield": "After creating a shield",
   "staminaDec_": "Stamina Consumption Decrease",
   "dmgAbsorption": {
     "pyro": "Shield Pyro DMG Absorption",
@@ -159,13 +167,30 @@
     "hydro": "After triggering a <hydro>Hydro</hydro> Swirl reaction",
     "pyro": "After triggering a <pyro>Pyro</pyro> Swirl reaction",
     "electro": "After triggering an <electro>Electro</electro> Swirl reaction",
-    "cryo": "After triggering a <cryo>Cryo</cryo> Swirl reaction"
+    "cryo": "After triggering a <cryo>Cryo</cryo> Swirl reaction",
+    "base": "After triggering a <anemo>Swirl</anemo> reaction"
   },
   "elementalReaction": {
     "hydro": "After triggering a <hydro>Hydro-related</hydro> Elemental Reaction",
     "electro": "After triggering an <electro>Electro-related</electro> Elemental Reaction",
+    "cryo": "After triggering a <cryo>Cryo-related</cryo> Elemental Reaction",
+    "pyro": "After triggering a <pyro>Pyro-related</pyro> Elemental Reaction",
+    "dendro": "After triggering a <dendro>Dendro-related</dendro> Elemental Reaction",
+    "anemo": "After triggering an <anemo>Anemo-related</anemo> Elemental Reaction",
+    "geo": "After triggering a <geo>Geo-related</geo> Elemental Reaction",
     "shatter": "After triggering a <shattered>Shatter</shattered> Elemental Reaction",
-    "cryo": "After triggering a <cryo>Cryo-related</cryo> Elemental Reaction"
+    "team": {
+      "pyro": "After a party member triggers a <pyro>Pyro-related</pyro> Elemental Reaction"
+    },
+    "nightsoul": {
+      "hydro": "After triggering a <hydro>Hydro-related</hydro> Elemental Reaction while in Nightsoul's Blessing",
+      "electro": "After triggering an <electro>Electro-related</electro> Elemental Reaction while in Nightsoul's Blessing",
+      "cryo": "After triggering a <cryo>Cryo-related</cryo> Elemental Reaction while in Nightsoul's Blessing",
+      "pyro": "After triggering a <pyro>Pyro-related</pyro> Elemental Reaction while in Nightsoul's Blessing",
+      "dendro": "After triggering a <dendro>Dendro-related</dendro> Elemental Reaction while in Nightsoul's Blessing",
+      "anemo": "After triggering an <anemo>Anemo-related</anemo> Elemental Reaction while in Nightsoul's Blessing",
+      "geo": "After triggering a <geo>Geo-related</geo> Elemental Reaction while in Nightsoul's Blessing"
+    }
   },
   "bonusScaling": {
     "skill_": "Ele. Skill Bonus Scaling",
@@ -188,7 +213,12 @@
     "electro": "Enemy is affected by <electro>Electro</electro>",
     "cryo": "Enemy is affected by <cryo>Cryo</cryo>",
     "frozenOrCryo": "Enemy is <cryo>Frozen</cryo> or affected by <cryo>Cryo</cryo>",
-    "pyro": "Enemy is affected by <pyro>Pyro</pyro>"
+    "pyro": "Enemy is affected by <pyro>Pyro</pyro>",
+    "burning": "Enemy in the <pyro>Burning</pyro> state",
+    "quicken": "Enemy in the <spread>Quicken</spread> state"
+  },
+  "enemyState": {
+    "burning": "Enemy in the <pyro>Burning</pyro> state"
   },
   "getElementalOrbParticle": "After picking up an Elemental Orb or Particle",
   "hpChange": "After HP changes",
@@ -201,5 +231,11 @@
     "changes": "After the value of a Bond of Life increases or decreases",
     "increases": "After the value of a Bond of Life increases",
     "percentOf": "% of Bond of Life"
+  },
+  "nightsoul": {
+    "partyBurst": "After nearby party members trigger a Nightsoul Burst",
+    "blessing": "While in the Nightsoul's Blessing state",
+    "consuming": "After consuming Nightsoul points",
+    "consumed": "Nightsoul points consumed"
   }
 }

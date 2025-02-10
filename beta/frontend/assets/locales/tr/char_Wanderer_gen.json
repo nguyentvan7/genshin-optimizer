@@ -134,13 +134,13 @@
     "name": "Shoban: Gösterişli Tüy",
     "description": {
       "0": "<strong>Akım Harmonisi</strong> durumundayken Avare'nin Kuugo: Fushoudan ve Kuugo: Toufukai Saldırı Hızı %10 artar.",
-      "1": "Ek olarak Bora Rüyası Pasif Yeteneği tarafından ateşlenen rüzgar okları, Avare'nin Saldırısının %25'i kadar ek Hasar verir. Öncelikle \"Bora Rüyası\" Pasif Yeteneğinin açılmış olması gerekir."
+      "1": "Ek olarak Bora Rüyası Pasif Yeteneği tarafından ateşlenen rüzgar okları, Avare'nin Saldırısının %25'i kadar ek Hasar verir. \"Bora Rüyası\" Pasif Yeteneğinin açılmış olması gerekir."
     }
   },
   "constellation2": {
     "name": "Niban: Beyaz Dalgaların Eşiğindeki Ada",
     "description": {
-      "0": "<strong>Akım Harmonisi</strong> durumundayken <strong>Kyougen: Beşli Merasim Oyunu</strong> hasarı, bu beceriyi kullanırken Kuugoryoku Puanı sınırı miktarıyla mevcut Kuugoryoku Puanı miktarı farkının her bir birim değeri için %4 artar.",
+      "0": "<strong>Akım Harmonisi</strong> durumundayken <strong>Kyougen: Beşli Merasim Oyunu</strong> Hasarı, bu beceriyi kullanırken Kuugoryoku Puanı sınırı miktarıyla mevcut Kuugoryoku Puanı miktarı farkının her bir birim değeri için %4 artar.",
       "1": "Bu yöntemle Kyougen: Beşli Merasim Oyununun Hasarı en fazla %200 artırılabilir."
     }
   },
