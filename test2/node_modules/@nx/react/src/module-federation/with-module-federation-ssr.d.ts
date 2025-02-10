@@ -1,2 +1,0 @@
-import { ModuleFederationConfig } from '@nx/devkit/src/utils/module-federation';
-export declare function withModuleFederationForSSR(options: ModuleFederationConfig): Promise<(config: any) => any>;

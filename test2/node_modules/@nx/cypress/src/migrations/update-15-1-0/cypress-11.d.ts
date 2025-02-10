@@ -1,6 +1,0 @@
-import { Tree } from '@nx/devkit';
-export declare function updateToCypress11(tree: Tree): Promise<() => void>;
-export declare function updateMountHookUsage(tree: Tree, filePath: string): void;
-export declare function updateUnmountUsage(tree: Tree, filePath: string): void;
-export declare function updateProviderUsage(tree: Tree, filePath: string): void;
-export default updateToCypress11;
