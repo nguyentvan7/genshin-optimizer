@@ -4,7 +4,7 @@ This library was generated with [Nx](https://nx.dev).
 
 ## Building
 
-Run `nx build gi-formula` to build the library.
+Run `nx build gi-formula` to build tsdasdhe library.
 
 ## Generating descriptor file
 
