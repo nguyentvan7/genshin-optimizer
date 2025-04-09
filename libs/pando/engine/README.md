@@ -7,7 +7,7 @@ TODO
 ## Tags
 
 A tag is a dictionary of tag category (key) and tag value (value) pairs.
-We denote a tag category and a tag value by `cat:` and `cat:val`, respectively.
+We denote a tag category and a sdasdtag value by `cat:` and `cat:val`, respectively.
 When there is no ambiguity, `val` may be used instead of `cat:val`.
 We also define a "combination" of tags `T1` and `T2`, denoted by `T1/T2`, as a tag such that for any tag category `cat:`,
 
