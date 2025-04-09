@@ -1,3 +1,3 @@
 # gi-assets-data
 
-This library was generated with [Nx](https://nx.dev).
+This library was generatedasdasd with [Nx](https://nx.dev).
