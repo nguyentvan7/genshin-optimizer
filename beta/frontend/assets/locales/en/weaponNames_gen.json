@@ -46,6 +46,7 @@
   "UrakuMisugiri": "Uraku Misugiri",
   "Absolution": "Absolution",
   "PeakPatrolSong": "Peak Patrol Song",
+  "Azurelight": "Azurelight",
   "WasterGreatsword": "Waster Greatsword",
   "OldMercsPal": "Old Merc's Pal",
   "FerrousShadow": "Ferrous Shadow",
@@ -76,6 +77,7 @@
   "PortablePowerSaw": "Portable Power Saw",
   "FruitfulHook": "Fruitful Hook",
   "EarthShaker": "Earth Shaker",
+  "FlameForgedInsight": "Flame-Forged Insight",
   "SkywardPride": "Skyward Pride",
   "WolfsGravestone": "Wolf's Gravestone",
   "SongOfBrokenPines": "Song of Broken Pines",
@@ -120,6 +122,8 @@
   "StaffOfTheScarletSands": "Staff of the Scarlet Sands",
   "CrimsonMoonsSemblance": "Crimson Moon's Semblance",
   "LumidouceElegy": "Lumidouce Elegy",
+  "SymphonistOfScents": "Symphonist of Scents",
+  "FracturedHalo": "Fractured Halo",
   "ApprenticesNotes": "Apprentice's Notes",
   "PocketGrimoire": "Pocket Grimoire",
   "MagicGuide": "Magic Guide",
@@ -163,6 +167,7 @@
   "SurfsUp": "Surf's Up",
   "StarcallersWatch": "Starcaller's Watch",
   "SunnyMorningSleepIn": "Sunny Morning Sleep-In",
+  "VividNotions": "Vivid Notions",
   "HuntersBow": "Hunter's Bow",
   "SeasonedHuntersBow": "Seasoned Hunter's Bow",
   "RavenBow": "Raven Bow",
@@ -195,6 +200,7 @@
   "RangeGauge": "Range Gauge",
   "FlowerWreathedFeathers": "Flower-Wreathed Feathers",
   "ChainBreaker": "Chain Breaker",
+  "SequenceOfSolitude": "Sequence of Solitude",
   "SkywardHarp": "Skyward Harp",
   "AmosBow": "Amos' Bow",
   "ElegyForTheEnd": "Elegy for the End",
@@ -205,6 +211,5 @@
   "TheFirstGreatMagic": "The First Great Magic",
   "SilvershowerHeartstrings": "Silvershower Heartstrings",
   "AstralVulturesCrimsonPlumage": "Astral Vulture's Crimson Plumage",
-  "QuantumCatalyst": "Quantum Cat-alyst",
-  "VividNotions": "Vivid Notions"
+  "QuantumCatalyst": "Quantum Cat-alyst"
 }
