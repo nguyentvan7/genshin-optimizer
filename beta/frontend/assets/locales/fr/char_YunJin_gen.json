@@ -35,7 +35,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -69,7 +73,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -102,7 +110,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -145,7 +157,7 @@
   "constellation4": {
     "name": "Le tranchant d'une fleur",
     "description": {
-      "0": "Lorsque Yun Jin déclenche une réaction de Cristallisation, sa DÉF augmente de 20 % pendant 12 s."
+      "0": "Lorsque Yun Jin déclenche une réaction de Cristallisation ou de Sélénocristallisation, sa DÉF augmente de 20 % pendant 12 s."
     }
   },
   "constellation5": {

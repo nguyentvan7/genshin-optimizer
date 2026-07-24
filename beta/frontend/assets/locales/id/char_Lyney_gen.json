@@ -45,7 +45,7 @@
       "2": "DMG Tahap 3",
       "3": "DMG Tahap 4",
       "4": "DMG Selama Plunging",
-      "5": "DMG Plunging Attack Min./Maks.",
+      "5": "DMG Plunging Attack Rendah/Tinggi",
       "6": "DMG Membidik",
       "7": "Serangan Membidik Tahap 1",
       "8": "DMG Prop Arrow",
@@ -55,7 +55,11 @@
       "12": "DMG Pyrotechnic Strike",
       "13": "DMG Spiritbreath Thorn",
       "14": "Jeda Spiritbreath Thorn",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -85,7 +89,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -114,7 +122,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {

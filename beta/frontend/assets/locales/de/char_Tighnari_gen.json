@@ -40,7 +40,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -67,7 +71,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -94,7 +102,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -139,7 +151,7 @@
   "constellation4": {
     "name": "Blätter bezeugen das Auf und Ab",
     "description": {
-      "0": "Erhöht die Elementarkunde aller Truppenmitglieder in der Nähe beim Anwenden der Fähigkeit <strong>Des Erschaffers Schlingstängel-Pfeil</strong> 8 s lang um 60 Punkte. Wenn Des Erschaffers Schlingstängel-Pfeil Reaktionen wie „In Flammen“, „Sprießen“, „Urwuchs“ oder „Rankenwuchs“ auslöst, wird ihre Elementarkunde um weitere 60 Punkte erhöht. In letzterem Fall wird auch die Dauer dieses Bonus zurückgesetzt."
+      "0": "Erhöht die Elementarkunde aller Truppenmitglieder in der Nähe beim Anwenden der Fähigkeit <strong>Des Erschaffers Schlingstängel-Pfeil</strong> 8 s lang um 60 Punkte. Wenn Des Erschaffers Schlingstängel-Pfeil Reaktionen wie „In Flammen“, „Sprießen“, „Mondspross“, „Urwuchs“ oder „Rankenwuchs“ auslöst, wird ihre Elementarkunde um weitere 60 Punkte erhöht. In letzterem Fall wird auch die Dauer dieses Bonus zurückgesetzt."
     }
   },
   "constellation5": {

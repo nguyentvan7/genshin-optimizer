@@ -35,7 +35,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -72,7 +76,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -107,11 +115,15 @@
       "8": "DMG Charged Attack",
       "9": "Konsumsi Stamina Charged Attack",
       "10": "DMG Selama Plunging",
-      "11": "DMG Plunging Attack Min./Maks.",
+      "11": "DMG Plunging Attack Rendah/Tinggi",
       "12": "Pemulihan Energi Musou Isshin",
       "13": "Durasi Musou Isshin",
       "14": "Cooldown",
-      "15": "Konsumsi Energy"
+      "15": "Konsumsi Energy",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {

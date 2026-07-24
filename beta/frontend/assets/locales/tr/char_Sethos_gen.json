@@ -40,13 +40,17 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
     "name": "Kadim Ayin: Gürleyen Kumlar",
     "description": {
-      "0": "Yıldırımın gücünü toplar ve <electro>Elektrik Alan Hasarı</electro> vererek hızla geriye kaçar. Eğer bu saldırı bir Elektrik Yüklü, Ay Yüklü, Süper İletim, Yüksek Voltaj, Hızlanma, Şiddetlenme, Aşırı Çiçeklenme veya Elektrik Girdabı tepkimesi tetiklerse Sethos belirli bir miktar Element Enerjisi yeniler.",
+      "0": "Yıldırımın gücünü toplar ve <electro>Elektrik Alan Hasarı</electro> vererek hızla geriye kaçar. Eğer bu saldırı bir Elektrik Yüklü, Ay Yüklü, Süper İletim, Yıldız İletimi, Yüksek Voltaj, Hızlanma, Şiddetlenme, Aşırı Çiçeklenme veya Elektrik Girdabı tepkimesi tetiklerse Sethos belirli bir miktar Element Enerjisi yeniler.",
       "1": "<br/>",
       "2": "<i>\"İçinde Tanrıyı barındıran Rahip ile çukurları vahaya dönüştüren Büyücü. Kum denizi şarkıcıları onların hikayelerini anlatmaya devam ediyor... Ancak ben bilirim onların efsane olmadığını, çünkü onlar benim atalarım.\"</i>"
     },
@@ -66,7 +70,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -95,7 +103,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -134,7 +146,7 @@
     "description": {
       "0": "Aşağıdaki koşullar karşılandığında Sethos 10sn boyunca %15 <electro>Elektrik Hasarı Bonusu</electro> kazanır (2 kademeye kadar birikebilir, kademelerin süresi bağımsızdır):",
       "1": [
-        "Hedefli Atışlar aracılığıyla Element Enerjisi tüketmek; bu koşulun tetiklenmesi için önce \"Kara Çaylağın Sırrı\" Pasif Yeteneğinin açılmış olması gerekir.",
+        "Hedefli Atışlar aracılığıyla Element Enerjisi tüketmek; bu koşulun tetiklenmesi için \"Kara Çaylağın Sırrı\" Yükseltme Yeteneğinin açılmış olması gerekir.",
         "<strong>Kadim Ayin: Gürleyen Kumlar</strong> aracılığıyla Element Tepkimeleri tetikleyerek Element Enerjisi yenilemek.",
         "<strong>Saklı Ayin: Gölgedelen Alacakaranlık</strong> kullanmak."
       ]
@@ -163,7 +175,7 @@
   "constellation6": {
     "name": "Sürgün Güneş Tapınağının Büyük Kitabı",
     "description": {
-      "0": "<strong>Gölgedelen Atışı</strong> bir düşmana isabet ettiğinde, \"Kara Çaylağın Sırrı\" Pasif Yeteneği tarafından tüketilen Element Enerjisi iade edilir. Bu etki her 15 saniyede bir tetiklenebilir. \"Kara Çaylağın Sırrı\" Pasif Yeteneğinin açılmış olması gerekir."
+      "0": "<strong>Gölgedelen Atışı</strong> bir düşmana isabet ettiğinde, \"Kara Çaylağın Sırrı\" Yükseltme Yeteneği tarafından tüketilen Element Enerjisi iade edilir. Bu etki her 15 saniyede bir tetiklenebilir. \"Kara Çaylağın Sırrı\" Yükseltme Yeteneğinin açılmış olması gerekir."
     }
   }
 }

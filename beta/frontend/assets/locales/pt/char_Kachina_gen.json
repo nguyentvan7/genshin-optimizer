@@ -35,7 +35,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -76,7 +80,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -105,7 +113,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -139,7 +151,7 @@
     "name": "Fragmentos São Gemas Também",
     "description": {
       "0": "Quando Kachina monta ou desmonta de <strong>Pirueta Turbo</strong>, ela absorverá Fragmentos Elementais criados pela Reação de Cristalização.",
-      "1": "Além disso, quando um membro da equipe pegar tal Fragmento, 3 de Energia Elemental serão restaurados para Kachina. A Energia pode ser restaurada dessa forma uma vez a cada 5s."
+      "1": "Além disso, quando um membro da equipe pegar tal Fragmento, ou desencadear uma Reação de Cristalização Lunar, 3 de Energia Elemental serão restaurados para Kachina. A Energia pode ser restaurada dessa forma uma vez a cada 5s."
     }
   },
   "constellation2": {

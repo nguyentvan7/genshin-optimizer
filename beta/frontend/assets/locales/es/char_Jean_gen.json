@@ -2,7 +2,7 @@
   "name": "Jean",
   "title": "La Caballera de Dandelion",
   "description": "La justa y rigurosa Caballera de Dandelion, y Gran Maestra Intendente de los Caballeros de Favonius de Mondstadt.",
-  "constellationName": "Leo Menor",
+  "constellationName": "Leo Minor",
   "auto": {
     "name": "Técnica de espada Favonius",
     "fields": {
@@ -36,7 +36,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -67,7 +71,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -100,7 +108,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {

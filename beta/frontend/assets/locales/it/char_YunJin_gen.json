@@ -35,7 +35,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -69,7 +73,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -102,7 +110,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -145,7 +157,7 @@
   "constellation4": {
     "name": "Un fiore come scudo",
     "description": {
-      "0": "Quando Yun Jin innesca una reazione di Cristallizzazione, la sua DIF aumenta di un 20% per 12 s."
+      "0": "Quando Yun Jin innesca reazioni di Cristallizzazione o di Cristallizzazione lunare, la sua DIF aumenta di un 20% per 12 s."
     }
   },
   "constellation5": {

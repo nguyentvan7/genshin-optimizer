@@ -35,7 +35,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -69,7 +73,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -102,7 +110,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -145,7 +157,7 @@
   "constellation4": {
     "name": "Çiçek ve Savaşçı",
     "description": {
-      "0": "Yun Jin, Kristalleşme Tepkimesini tetiklediğinde 12 saniyeliğine Savunması %20 artar."
+      "0": "Yun Jin Kristalleşme veya Ay Kristalleşmesi tepkimelerini tetiklediğinde 12 saniyeliğine Savunması %20 artar."
     }
   },
   "constellation5": {

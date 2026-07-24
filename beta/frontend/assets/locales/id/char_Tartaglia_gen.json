@@ -43,7 +43,11 @@
       "12": "DMG Plunging Attack Rendah/Tinggi",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -82,13 +86,17 @@
       "12": "Cooldown Maksimum",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
     "name": "Havoc: Obliteration",
     "description": {
-      "0": "Melancarkan serangan yang berbeda-beda sesuai dengan mode bertarung yang sedang digunakan Targtalia:",
+      "0": "Melancarkan serangan yang berbeda-beda sesuai dengan mode bertarung yang sedang digunakan Tartaglia:",
       "1": "<br/>",
       "2": "<strong>Mode Jarak Jauh: Flash of Havoc</strong>",
       "3": "Menembakkan panah sihir yang mengandung elemen Hydro dengan cepat, mengakibatkan <hydro>Hydro DMG area</hydro> dan menyebabkan efek Riptide.",
@@ -118,7 +126,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {

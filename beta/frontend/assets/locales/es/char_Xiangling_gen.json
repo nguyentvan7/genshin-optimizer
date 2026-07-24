@@ -2,7 +2,7 @@
   "name": "Xiangling",
   "title": "La Maestra Culinaria de Liyue",
   "description": "Una reconocida chef de Liyue. Le apasiona la cocina y sobresale al hacer sus platos calientes y picantes.",
-  "constellationName": "Trullae",
+  "constellationName": "Trulla",
   "auto": {
     "name": "Kung-fu pasta",
     "fields": {
@@ -35,7 +35,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -61,7 +65,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -88,7 +96,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {

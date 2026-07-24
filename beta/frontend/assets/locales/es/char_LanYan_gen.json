@@ -35,7 +35,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -67,7 +71,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -93,7 +101,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -119,8 +131,8 @@
   "constellation1": {
     "name": "Si alguien anduviera entre las nubes...",
     "description": {
-      "0": "Tras activarse el cambio elemental del talento pasivo “Cuchillas selloraculares”, cuando Lan Yan lance a los enemigos sus anillos plumaluna al usar la Habilidad Elemental, <strong>Danza briznafénix</strong>, lanzará un anillo adicional.",
-      "1": "Es necesario desbloquear el talento pasivo “Cuchillas selloraculares”."
+      "0": "Tras activarse el cambio elemental del talento de ascensión “Cuchillas selloraculares”, cuando Lan Yan lance a los enemigos sus anillos plumaluna al usar la Habilidad Elemental, <strong>Danza briznafénix</strong>, lanzará un anillo adicional.",
+      "1": "Es necesario desbloquear el talento de ascensión “Cuchillas selloraculares”."
     }
   },
   "constellation2": {

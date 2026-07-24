@@ -36,7 +36,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -75,7 +79,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -112,7 +120,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -147,8 +159,8 @@
   "constellation2": {
     "name": "Oturan Tazı: Saat Gibi İstikrarlı",
     "description": {
-      "0": "<strong>Generalin Görkemi</strong> devredeyken yakındaki aktif bir karakter Kristalleşme tepkimesinden bir Element Parçası elde ederse becerinin süresi 1 saniye uzar. ",
-      "1": "Bu etki 0,1 saniyede bir uygulanabilir. Maksimum 3 saniye uzayabilir."
+      "0": "<strong>Generalin Görkemi</strong> devredeyken yakındaki aktif bir karakter Kristalleşme tepkimesinden bir Element Parçası elde ederse veya bir Ay Kristalleşmesi tepkimesi tetiklerse Generalin Görkeminin süresi 1 saniye uzar.",
+      "1": "Bu etki 0,1 saniyede bir tetiklenebilir. Süre maksimum 3 saniye uzayabilir."
     }
   },
   "constellation3": {

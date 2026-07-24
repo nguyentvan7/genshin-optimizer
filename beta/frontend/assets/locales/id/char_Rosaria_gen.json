@@ -35,7 +35,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -62,7 +66,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -89,7 +97,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -108,8 +120,8 @@
   "passive3": {
     "name": "Night Walk",
     "description": {
-      "0": "Saat malam hari (18:00 — 06:00), anggota party sendiri mendapatkan efek peningkatan kecepatan: meningkatkan 10% Movement SPD.",
-      "1": "Efek ini tidak aktif dalam Domain, Domain Trounce, atau Spiral Abyss. Efek peningkatan kecepatan tidak dapat ditumpuk."
+      "0": "Saat malam hari (18:00 - 06:00), anggota party sendiri mendapatkan efek Swift Stride: meningkatkan 10% Movement SPD.",
+      "1": "Efek ini tidak aktif dalam Domain, Domain Trounce, atau Spiral Abyss. Efek Swift Stride tidak dapat ditumpuk."
     }
   },
   "constellation1": {

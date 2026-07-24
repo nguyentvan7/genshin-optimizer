@@ -36,7 +36,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "skill": {
@@ -75,7 +79,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "burst": {
@@ -112,7 +120,11 @@
       "12": "",
       "13": "",
       "14": "",
-      "15": ""
+      "15": "",
+      "16": "",
+      "17": "",
+      "18": "",
+      "19": ""
     }
   },
   "passive1": {
@@ -147,7 +159,7 @@
   "constellation2": {
     "name": "Repos canin : Aplomb du temps",
     "description": {
-      "0": "Lorsqu'un personnage déployé à proximité obtient un fragment élémentaire généré par une réaction de Cristallisation alors qu'un <strong>prestige de général</strong> est actif, la durée du prestige de général de Gorou augmente de 1 s.",
+      "0": "Lorsqu'un personnage déployé à proximité obtient un fragment élémentaire généré par une réaction de Cristallisation, ou déclenche une réaction de Sélénocristallisation, alors qu'un <strong>prestige de général</strong> est actif, la durée du prestige de général de Gorou augmente de 1 s.",
       "1": "Cet effet peut être déclenché une fois toutes les 0,1 s, et sa durée peut être prolongée d'un maximum de 3 s de cette manière."
     }
   },
