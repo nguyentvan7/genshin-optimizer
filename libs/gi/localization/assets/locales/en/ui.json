@@ -12,7 +12,8 @@
     "scanner": "Scanners",
     "archive": "Archive",
     "loadouts": "Loadouts",
-    "builds": "Builds"
+    "builds": "Builds",
+    "liveUpdate": "Live Update"
   },
   "social": {
     "paypal": "PayPal",
@@ -73,5 +74,18 @@
     "stamina_buffs": "Stamina Buffs",
     "misc": "Misc. Stats"
   },
-  "notActive": "(Unactivated)"
+  "notActive": "(Unactivated)",
+  "liveUpdate": {
+    "title": "Live Update",
+    "clearQueue": "Clear queue",
+    "applyAll": "Apply all updates",
+    "queue_one": "{{count}} additional item waiting for action",
+    "queue_other": "{{count}} additional items waiting for action",
+    "waiting": "Waiting for data to be sent via Live Update",
+    "info": "You can connect GO to supported applications to allow live updating of data, such as when upgrading artifacts or receiving new artifacts.",
+    "connect": "Connect to app",
+    "restart": "Restart connection",
+    "disconnected": "Not connected",
+    "connected": "Connected"
+  }
 }

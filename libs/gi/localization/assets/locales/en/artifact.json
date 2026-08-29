@@ -27,6 +27,7 @@
     "preview": "Artifact Preview",
     "dupArt": "Duplicate artifact detected",
     "upArt": "Upgraded artifact detected",
+    "newArt": "New artifact detected",
     "beforeEdit": "Before Edit",
     "btnSave": "Save Artifact",
     "btnAdd": "Add Artifact",

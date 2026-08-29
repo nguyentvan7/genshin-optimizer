@@ -4,7 +4,11 @@ import { Tally } from '@genshin-optimizer/common/ui'
 import { shouldShowDevComponents } from '@genshin-optimizer/common/util'
 import { useDatabase, useDBMeta } from '@genshin-optimizer/gi/db-ui'
 import { FlowerIcon } from '@genshin-optimizer/gi/svgicons'
-import { SillyContext } from '@genshin-optimizer/gi/ui'
+import {
+  IsLiveUpdateConnectedIcon,
+  LiveUpdateContext,
+  SillyContext,
+} from '@genshin-optimizer/gi/ui'
 import ArticleIcon from '@mui/icons-material/Article'
 import BookIcon from '@mui/icons-material/Book'
 import ConstructionIcon from '@mui/icons-material/Construction'
@@ -16,6 +20,7 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import {
   AppBar,
   Avatar,
+  Badge,
   Box,
   Button,
   Chip,
@@ -96,6 +101,12 @@ const doc: ITab = {
   to: '/doc',
   value: 'doc',
 }
+const liveUpdate: ITab = {
+  i18Key: 'tabs.liveUpdate',
+  icon: '',
+  to: '',
+  value: 'liveUpdate',
+}
 const setting: ITab = {
   i18Key: 'tabs.setting',
   icon: <SettingsIcon />,
@@ -143,6 +154,7 @@ const maincontent = [
   tools,
   scanner,
   doc,
+  liveUpdate,
   setting,
 ] as const
 function HeaderContent({ anchor }: { anchor: string }) {
@@ -169,6 +181,7 @@ function DesktopHeader({
   const isXL = useMediaQuery(theme.breakpoints.up('xl'))
   const { t } = useTranslation('ui')
   const { silly } = useContext(SillyContext)
+  const { artiQueue: queue, setModalOpen } = useContext(LiveUpdateContext)
   return (
     <AppBar
       position="static"
@@ -221,6 +234,40 @@ function DesktopHeader({
           }
         />
         {maincontent.map(({ i18Key, value, to, icon, textSuffix }) => {
+          if (value === 'liveUpdate') {
+            const badge = (
+              <Badge
+                badgeContent={queue.length}
+                color="primary"
+                anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+              >
+                <IsLiveUpdateConnectedIcon />
+              </Badge>
+            )
+            const tooltipIcon = isXL ? (
+              badge
+            ) : (
+              <Tooltip arrow title={t(i18Key)}>
+                <span>{badge}</span>
+              </Tooltip>
+            )
+            return (
+              <Tab
+                key={value}
+                value={value}
+                component={Button}
+                onClick={setModalOpen}
+                label={
+                  <>
+                    {tooltipIcon}
+                    {isXL && <Typography pl={1}>{t(i18Key)}</Typography>}
+                  </>
+                }
+                sx={{ ml: 'auto', flexDirection: 'row', overflow: 'visible' }}
+              />
+            )
+          }
+
           const tooltipIcon = isXL ? (
             icon
           ) : (
@@ -244,7 +291,6 @@ function DesktopHeader({
                   </Box>
                 ) : undefined
               }
-              sx={{ ml: value === 'setting' ? 'auto' : undefined }}
             />
           )
         })}
@@ -279,6 +325,7 @@ function MobileHeader({
 
   const { t } = useTranslation('ui')
   const { silly } = useContext(SillyContext)
+  const { artiQueue: queue, setModalOpen } = useContext(LiveUpdateContext)
   return (
     <>
       <AppBar
@@ -392,6 +439,15 @@ function MobileHeader({
             ) : undefined}
           </Button>
           <Box flexGrow={1} />
+          <IconButton onClick={setModalOpen}>
+            <Badge
+              badgeContent={queue.length}
+              color="primary"
+              anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+            >
+              <IsLiveUpdateConnectedIcon />
+            </Badge>
+          </IconButton>
           <IconButton
             color="inherit"
             aria-label="open drawer"

@@ -8,6 +8,7 @@ import {
   CircularProgress,
   Divider,
   Table,
+  TableBody,
   TableCell,
   TableContainer,
   TableHead,
@@ -215,38 +216,41 @@ export function LocalStorageUsageCard() {
                   <TableCell>{t('storage.size')}</TableCell>
                 </TableRow>
               </TableHead>
-              {Object.entries(MBByCategory)
-                .sort((a, b) => b[1] - a[1])
-                .map(([key, megabytes]) => (
-                  <TableRow
-                    sx={{
-                      opacity:
-                        percentByCategory[key] > DISPLAY_PERCENT_THRESH
-                          ? undefined
-                          : 0.5,
-                    }}
-                  >
-                    <TableCell>
-                      <Box
-                        display="inline-block"
-                        width="16px"
-                        height="16px"
-                        mr={2}
-                        sx={{
-                          backgroundColor:
-                            percentByCategory[key] > DISPLAY_PERCENT_THRESH
-                              ? COLORS[key]
-                              : undefined,
-                        }}
-                      />
-                      {t(`storage.${key}`)}
-                    </TableCell>
-                    <TableCell>
-                      {megabytes.toFixed(2)}MB (
-                      {percentByCategory[key].toFixed(2)}%)
-                    </TableCell>
-                  </TableRow>
-                ))}
+              <TableBody>
+                {Object.entries(MBByCategory)
+                  .sort((a, b) => b[1] - a[1])
+                  .map(([key, megabytes]) => (
+                    <TableRow
+                      key={key}
+                      sx={{
+                        opacity:
+                          percentByCategory[key] > DISPLAY_PERCENT_THRESH
+                            ? undefined
+                            : 0.5,
+                      }}
+                    >
+                      <TableCell>
+                        <Box
+                          display="inline-block"
+                          width="16px"
+                          height="16px"
+                          mr={2}
+                          sx={{
+                            backgroundColor:
+                              percentByCategory[key] > DISPLAY_PERCENT_THRESH
+                                ? COLORS[key]
+                                : undefined,
+                          }}
+                        />
+                        {t(`storage.${key}`)}
+                      </TableCell>
+                      <TableCell>
+                        {megabytes.toFixed(2)}MB (
+                        {percentByCategory[key].toFixed(2)}%)
+                      </TableCell>
+                    </TableRow>
+                  ))}
+              </TableBody>
             </Table>
           </TableContainer>
         </Box>

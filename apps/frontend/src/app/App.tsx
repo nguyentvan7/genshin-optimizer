@@ -9,6 +9,8 @@ import '@genshin-optimizer/gi/i18n' // import to load translations
 import { theme } from '@genshin-optimizer/gi/theme'
 import {
   GOAdWrapper,
+  LiveUpdateModal,
+  LiveUpdateProvider,
   SillyContext,
   SnowContext,
   useSilly,
@@ -145,16 +147,18 @@ function App() {
         <CssBaseline enableColorScheme />
         <SillyContext.Provider value={SillyContextObj}>
           <SnowContext.Provider value={SnowContextObj}>
-            <DatabaseContext.Provider value={dbContextObj}>
-              <ErrorBoundary>
-                <HashRouter basename="/">
-                  <AdBlockContextWrapper>
-                    <Content />
-                  </AdBlockContextWrapper>
-                  <ScrollTop />
-                </HashRouter>
-              </ErrorBoundary>
-            </DatabaseContext.Provider>
+            <LiveUpdateProvider>
+              <DatabaseContext.Provider value={dbContextObj}>
+                <ErrorBoundary>
+                  <HashRouter basename="/">
+                    <AdBlockContextWrapper>
+                      <Content />
+                    </AdBlockContextWrapper>
+                    <ScrollTop />
+                  </HashRouter>
+                </ErrorBoundary>
+              </DatabaseContext.Provider>
+            </LiveUpdateProvider>
           </SnowContext.Provider>
         </SillyContext.Provider>
       </ThemeProvider>
@@ -234,6 +238,7 @@ function Content() {
       {/* make sure footer is always at bottom */}
       <Box flexGrow={1} />
       <Snow />
+      <LiveUpdateModal />
       {/* Footer Ad */}
       <AdBanner width={width} dataAdSlot="2396256483" Ad={GOAdWrapper} />
       <Footer />
